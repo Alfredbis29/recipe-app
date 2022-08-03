@@ -1,0 +1,31 @@
+<section class='p-6'>
+  <h3>All Foods</h1>
+  <div class="border flex justify-content-end my-2">
+    <button class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+      <%= link_to 'Add new food', new_food_path %>
+    </button>
+  </div>
+  <table class="border m-3 w-full">
+    <thead>
+        <tr>
+        <th scope="col">Food</th>
+        <th scope="col">Measurement Unit</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @foods.each do |food| %>
+        <tr>
+        <th scope="row"> <%= food.name %> </th>
+        <td> <%= food.measurement_unit %> </td>
+        <td>$<%= food.price %> </td>
+        <td>
+            <%= button_to "Delete", food_path(food.id ), :method => :delete, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+
+        </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
