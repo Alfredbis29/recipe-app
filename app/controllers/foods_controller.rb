@@ -1,14 +1,7 @@
 class FoodController < ActionController::Base
+  def index; end
 
-    def index
+  def show; end
 
-    end
-
-    def show
-
-    end
-
-    def new
-        
-    end
+  def new; end
 end
