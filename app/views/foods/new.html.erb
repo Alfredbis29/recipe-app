@@ -1,0 +1,21 @@
+<section class="border warning">
+  <h3 class="m-4"> Add Food</h3>
+  <%= form_with url: foods_path, scope: :food do |form| %>
+    <div class="m-4">
+    <%= form.label :Name, class:"form-label" %><br>
+    <%= form.text_field :name, class: 'form-control', require: true %>
+    </div>
+
+    <div class="m-4">
+    <%= form.label :Measurement_Unit, class:"form-label" %><br>
+    <%= form.text_field :measurement_unit, class: 'form-control', require: true %>
+    </div>
+
+    <div class="m-4">
+    <%= form.label :Price, class:"form-label" %><br>
+    <%= form.number_field :price, class: 'form-control', require: true %>
+    </div>
+
+    <%= form.submit "Submit", class: "btn btn-warning m-4" %>
+  <% end %>
+</section>

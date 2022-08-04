@@ -1,8 +1,11 @@
 class CreateFood < ActiveRecord::Migration[7.0]
   def change
     create_table :foods do |t|
-
-      t.timestamps
+    t.string :name
+    t.string :measurement_unit
+    t.float :price
+    t.integer :quantity
+    t.timestamps
     end
   end
 end
