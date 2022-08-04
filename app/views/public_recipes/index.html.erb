@@ -1,0 +1,17 @@
+<section class="m-6 border text-center">
+    <h1>Public Recipes</h1>
+    <div>
+        <% @public_recipes.each do |public_recipe| %>
+            <div class="border p-2">
+                <% if public_recipe.public == "public" %>
+                    <h2><%= public_recipe.name %></h2>
+                    <p><%= public_recipe.description %></p>
+                    <p><%= public_recipe.user.name %></p>
+                    <p><%= public_recipe.created_at %></p>
+                    <p><%= link_to 'Show', public_recipe %></p>
+
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</section>

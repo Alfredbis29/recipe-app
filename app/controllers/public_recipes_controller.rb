@@ -1,7 +1,5 @@
-class PublicRecipesController < ActionController::Base
-  def index; end
-
-  def show; end
-
-  def new; end
+class PublicRecipesController < ApplicationController
+  def index
+    @public_recipes = Recipe.all
+  end
 end
