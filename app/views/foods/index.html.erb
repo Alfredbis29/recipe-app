@@ -1,11 +1,11 @@
 <section class='m-4'>
   <h3>All Foods</h1>
-  <div class="border flex justify-content-end p-6">
+  <div class="flex justify-content-end p-6 m-4">
 <button type="button" class="btn btn-warning">
    <%= link_to 'Add new food', new_food_path %>
 </button>
   </div>
-  <table class="border border-warning p-6">
+  <table class="border border-warning p-6 m-4">
     <thead>
         <tr>
         <th scope="col">Food</th>
@@ -21,7 +21,7 @@
         <td> <%= food.measurement_unit %> </td>
         <td>$<%= food.price %> </td>
         <td>
-            <%= button_to "Delete", food_path(food.id ), :method => :delete, class: "btn btn-warning" %>
+            <%= button_to "Delete", food_path(food.id ), :method => :delete, class: "btn btn-danger m-3" %>
 
         </td>
         </tr>
