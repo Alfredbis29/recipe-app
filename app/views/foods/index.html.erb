@@ -1,4 +1,4 @@
-<section class='p-6'>
+<section class='mb-3 p-4'>
   <h3>All Foods</h1>
   <div class="border flex justify-content-end my-2">
     <button class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
@@ -21,7 +21,7 @@
         <td> <%= food.measurement_unit %> </td>
         <td>$<%= food.price %> </td>
         <td>
-            <%= button_to "Delete", food_path(food.id ), :method => :delete, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+            <%= button_to "Delete", food_path(food.id ), :method => :delete, class: "bg-primary" %>
 
         </td>
         </tr>
