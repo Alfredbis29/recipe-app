@@ -1,0 +1,35 @@
+<% @recipe.each do |dist| %>
+<div>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= dist.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Preparation time:</strong>
+    <%= dist.preparation_time %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Cooking time:</strong>
+    <%= dist.preparation_time%>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= dist.description %>
+  </p>
+
+  <%# <p class="my-5">
+    <strong class="block font-medium mb-1">Public:</strong>
+    
+  </p> %>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">User:</strong>
+    <%= dist.user_id %>
+  </p>
+
+
+</div>
+<%  end %>
