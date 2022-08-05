@@ -1,6 +1,6 @@
 <section class="border warning">
   <h3 class="m-4"> Add Recipe</h3>
-  <%= form_with url: recipes_url, scope: :recipe do |form| %>
+  <%= form_with url: recipes_path, scope: :recipe do |form| %>
     <div class="m-4">
     <%= form.label :Name, class:"form-label" %><br>
     <%= form.text_field :name, class: 'form-control', require: true %>
