@@ -15,22 +15,27 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_04_082202) do
   enable_extension "plpgsql"
 
   create_table "foods", force: :cascade do |t|
+    t.string "name"
+    t.string "measurement_unit"
+    t.float "price"
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.integer "quantity"
-    t.float "price"
-    t.string "measurement_unit"
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_foods_on_user_id"
   end
 
-  create_table "public_reciples", force: :cascade do |t|
+  create_table "public_recipes", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.bigint "food_id", null: false
+    t.integer "quantity", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["food_id"], name: "index_public_recipes_on_food_id"
+    t.index ["recipe_id"], name: "index_public_recipes_on_recipe_id"
   end
 
-  create_table "reciples", force: :cascade do |t|
+  create_table "recipes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,4 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_04_082202) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "public_recipes", "foods"
+  add_foreign_key "public_recipes", "recipes"
 end
