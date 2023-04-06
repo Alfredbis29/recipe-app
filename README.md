@@ -3,9 +3,9 @@ This is A simple food delivery app that allows users to browse a menu of availab
 
 The app typically has a database that stores information about food items, users and orders.
 
-  - FoodItem: This model represents a food item that can be ordered. It has attributes such as name, description, price, and image_url.
+  - FoodItem: This model represents a food item that can be ordered. It has attributes such as name, description, price, and `image_url.`
   - User: This model represents the super admin and the normal user, such as a customer or a restaurant owner. It has attributes such as name, email, and password.
-  - Order: This model represents an order placed by a user. It  has attributes such as user_id, total_price,quatity, and status.
+  - Order: This model represents an order placed by a user. It  has attributes such as `user_id`, `total_price`,`quatity`, and `status`.
   
 
 ### Deployment
