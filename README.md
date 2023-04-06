@@ -31,7 +31,7 @@ Here are the steps to follow in order to get this project on your local computer
 
 ### Setup
 
-clone this repo by typing `git clone https://github.com/Alfredbis29/Food-delivery-app.git`
+clone this repo by typing `https://github.com/Alfredbis29/recipe-app.git`
 
 ### Install
 
@@ -43,7 +43,7 @@ start the local server by running `rails s`
 
 ### Testing
 
-run the tests by typing `rails rswag`
+run the tests by typing `rails rspec`
 
 
 ### Documentation
